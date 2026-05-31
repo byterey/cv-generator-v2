@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build output (contains generated PDFs/HTMLs with user data)
+output/
+
+# User data (contains PII — users copy from sample-data/)
+cv.yml
+profile.yml
+cv.md
+# Allow the committed sample file
+!sample-data/cv.yml
+
+# Job applications (private)
+jobs/
+
+# Environment files
+.env
+.env.*
+!.env.example
+*.local.json
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+.chrome-tmp
+.output/
+dist/
+
+# Agent configs (personal, not part of the app)
+.codex/
+MASTER.md
+CLAUDE.md
+AGENTS.md

@@ -1,0 +1,63 @@
+# =============================================================================
+# SAMPLE OVERLAY — Tailor your CV for a specific job description.
+# =============================================================================
+# An overlay modifies the base CV without changing the master data.
+# You can: reorder sections, reorder/rephrase bullets, change the headline
+# and summary, and exclude skills, certifications, or experience entries
+# that are less relevant to a particular role.
+#
+# Usage:
+#   npm run build -- --overlay sample-data/sample-overlay.yml
+#   npm run build -- --overlay sample-data/sample-overlay.yml --data sample-data/cv.yml
+# =============================================================================
+
+# Override the personal headline and summary (use JD language, same facts)
+headline: Senior DevSecOps Engineer | CI/CD Security, Vulnerability Remediation, Cloud Security
+summary: >
+  Senior DevSecOps Engineer with 10+ years of experience securing CI/CD pipelines,
+  automating vulnerability management, and driving remediation across cloud-native
+  environments. Combines deep platform engineering expertise with hands-on application
+  security experience in regulated financial services environments.
+
+# Change section order (omit sections you want to hide)
+meta:
+  sections:
+    - personal
+    - skills
+    - experience
+    - certifications
+    - education
+    - projects
+
+# Reorder skill categories by JD relevance
+skills:
+  category_order:
+    - DevSecOps & Security
+    - Cloud & Networking
+    - DevOps & Deployment
+    - Programming & Scripting
+    - Monitoring & Analytics
+    - Databases & Caching
+    - Testing & Quality
+    - AI & Platform Tools
+    - Delivery & Collaboration
+
+# Remove certifications not relevant to this JD
+certifications:
+  exclude:
+    - Google Project Management
+
+# Reorder bullets per role (most relevant first) and rephrase for JD alignment
+experience:
+  - company: Acme Financial Services
+    bullet_order: [3, 5, 0, 7, 1, 4, 6]
+    bullet_rephrase:
+      3: Reduced 300+ security findings by 65% by analyzing and remediating OWASP-mapped vulnerabilities surfaced by SAST, SCA, and penetration test reports across 30+ enterprise applications.
+      5: Used Azure Application Insights and KQL daily to investigate production security events, monitoring availability, latency, and system health across cloud infrastructure.
+      0: Owned CI/CD security pipeline across 30+ enterprise applications, managing release activities, security gates, and monthly production deployments to ensure stability and operational continuity.
+
+  - company: Global Tech Consulting
+    bullet_order: [2, 0, 3, 1, 4]
+    bullet_rephrase:
+      2: Led the migration from Jenkins to GitLab CI/CD for 20+ enterprise applications, replacing legacy pipelines with standardized GitLab workflows and Ansible-managed configuration in a regulated banking environment.
+      0: Delivered DevSecOps engineering for a major banking institution, integrating SAST and vulnerability scanning into CI/CD pipelines for regulated financial systems.

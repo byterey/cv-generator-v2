@@ -1,0 +1,31 @@
+Senior DevSecOps Engineer
+
+About the Role
+We are looking for a Senior DevSecOps Engineer to join our platform engineering team.
+You will be responsible for securing our CI/CD pipelines, automating security testing,
+and driving vulnerability remediation across our cloud infrastructure.
+
+Requirements
+- 5+ years of experience in DevOps, DevSecOps, or application security
+- Strong experience with CI/CD tools (GitLab CI, Jenkins, GitHub Actions)
+- Experience with SAST, DAST, and SCA tooling
+- Cloud experience (Azure preferred, AWS or GCP acceptable)
+- Container security and Kubernetes experience
+- Proficiency in at least one scripting language (Python, Bash, or PowerShell)
+- Familiarity with OWASP Top 10 and vulnerability management
+- Incident response and on-call experience
+
+Nice to Have
+- Experience with Ansible, Terraform, or other IaC tools
+- Security certifications (CISSP, Azure Security, or similar)
+- Experience in regulated industries (finance, healthcare, government)
+- Threat modelling experience
+- SIEM and monitoring tool experience (Splunk, Azure Application Insights)
+
+What You'll Do
+- Own the security pipeline across 30+ microservices
+- Automate vulnerability scanning and reporting
+- Partner with development teams to remediate findings
+- Design and implement security monitoring and alerting
+- Lead incident response for security events
+- Mentor junior engineers on security best practices

@@ -1,0 +1,272 @@
+# =============================================================================
+# SAMPLE CV DATA — Replace with your own information.
+# =============================================================================
+# This file is the single source of truth for your CV content.
+# Run `npm run build` to generate output/cv.html and output/cv.pdf.
+# Run `npm run tailor jobs/<job-description>.txt` to score your CV against a JD.
+#
+# Structure follows the data model documented in README.md.
+# All dates are { year, month } — templates handle formatting.
+# Bullets and descriptions use markdown; skill items are plain strings.
+# =============================================================================
+
+meta:
+  sections:
+    - personal
+    - experience
+    - skills
+    - education
+    - certifications
+    - projects
+
+personal:
+  name: Jane Smith
+  headline: Senior DevSecOps & Platform Engineer | Security Automation, CI/CD, Cloud Infrastructure
+  email: jane.smith@example.com
+  phone: "+1 555-0123"
+  location: New York, USA
+  links:
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/janesmith/
+    - label: GitHub
+      url: https://github.com/janesmith/
+  summary: >
+    Senior DevSecOps and Platform Engineer with 10+ years of experience across
+    financial services, telecommunications, and technology sectors. Career progressed
+    from software development and quality engineering into platform and security
+    engineering — combining a developer's understanding of how systems break with
+    a security engineer's discipline in fixing them at scale. Experienced in managing
+    CI/CD pipelines, automating security gates, and leading remediation efforts
+    across large regulated environments.
+
+experience:
+  - company: Acme Financial Services
+    role: Senior Platform Engineer (Security)
+    location: New York, USA
+    start: { year: 2022, month: 3 }
+    current: true
+    bullets:
+      - Managed CI/CD pipelines, release activities, and monthly production deployments
+        across 30+ enterprise applications, ensuring stability, security, and operational continuity.
+      - Designed and established the enterprise test automation framework from scratch
+        — covering governance, test strategy, approach, execution, and reporting —
+        before transitioning into a dedicated security engineering role.
+      - Reduced 300+ security findings by 65% by analyzing and remediating OWASP-mapped
+        vulnerabilities surfaced by SAST, SCA, and penetration test reports,
+        including injection flaws, insecure dependencies, and misconfigurations across
+        30+ enterprise applications.
+      - Participated in on-call duty roster for alert management, responding
+        to production incidents, performing triage and root cause analysis, and conducting
+        post-incident reviews to reduce MTTR across enterprise applications.
+      - Used application performance monitoring and log analytics daily to investigate
+        and debug production issues, monitoring availability, latency, and system health.
+      - Led and managed a team of 4 engineers — conducting performance
+        reviews, supporting hiring and onboarding, and developing team capability.
+      - Ran DAST scans and conducted threat modelling for enterprise applications,
+        identifying runtime vulnerabilities and attack surface risks to prioritise
+        remediation alongside SAST and SCA findings.
+
+  - company: Global Tech Consulting
+    role: Software Engineer Consultant / Test Automation Lead
+    location: London, UK / Dublin, Ireland
+    start: { year: 2019, month: 1 }
+    end: { year: 2022, month: 2 }
+    bullets:
+      - Delivered test automation and DevOps engineering for a major banking institution,
+        gaining domain expertise in banking platforms, regulated financial systems, and compliance-driven
+        delivery within a Tier-1 financial services environment.
+      - Centralised the test automation framework, standardising test strategy,
+        tooling, and approach across distributed teams using Java, Selenium, Maven,
+        and Cucumber for UI testing and Karate for API validation.
+      - Led the migration from Jenkins to GitLab CI/CD for 20+ enterprise applications,
+        replacing legacy pipelines with standardized GitLab workflows and Ansible-managed configuration.
+      - Maintained and enhanced GitLab CI/CD pipeline templates, standardizing build
+        and deployment processes and improving automation reliability across distributed teams.
+      - Supported production incident response for enterprise client systems, performing
+        triage and root cause analysis on critical failures to restore service stability.
+      - Managed a team of 3 test automation engineers, conducting performance reviews
+        and supporting hiring for the programme test team.
+
+  - company: Telecom Systems Inc.
+    role: Quality Engineer
+    location: Dublin, Ireland
+    start: { year: 2015, month: 6 }
+    end: { year: 2018, month: 12 }
+    bullets:
+      - Validated and supported high-volume OSS/BSS telecom billing systems for major
+        carriers, ensuring system reliability and compliance against business KPIs.
+      - Analyzed 100+ defect logs monthly, pinpointing root causes and cutting repeat bugs
+        by 25% across telecom billing platforms.
+      - Performed API testing using SoapUI to validate telecom billing service integrations
+        and ensure contract compliance across system interfaces.
+
+  - company: Startup Labs
+    role: Junior Developer
+    location: Dublin, Ireland
+    start: { year: 2013, month: 9 }
+    end: { year: 2015, month: 5 }
+    bullets:
+      - Developed enterprise-grade Java applications supporting internal
+        systems, ensuring high performance and availability for business-critical operations.
+      - Delivered backend modules for high-volume internal services, optimizing transaction
+        throughput and reducing latency across internal systems.
+
+education:
+  - institution: University of Technology
+    degree: Certificate
+    field: Cybersecurity
+    end: { year: 2023 }
+
+  - institution: Dublin City University
+    degree: Bachelor of Science
+    field: Computer Science, Major in Network Administration
+    end: { year: 2013 }
+
+skills:
+  - category: DevSecOps & Security
+    items:
+      - SonarQube
+      - SAST (Static Application Security Testing)
+      - SCA (Software Composition Analysis)
+      - DAST (Dynamic Application Security Testing)
+      - Threat Modelling
+      - Microsoft Defender for Cloud
+      - SIEM (Security Information & Event Management)
+      - OWASP Vulnerability Remediation
+      - Penetration Test Finding Remediation
+      - CI/CD Security Gates
+      - Container Image Hardening
+
+  - category: DevOps & Deployment
+    items:
+      - Linux (RHEL)
+      - Windows Server
+      - Active Directory
+      - Group Policy (GPO)
+      - Docker
+      - Kubernetes
+      - Azure DevOps
+      - GitLab CI/CD
+      - Jenkins
+      - GitHub Actions
+      - Ansible
+      - Terraform
+      - YAML
+
+  - category: Testing & Quality
+    items:
+      - Selenium
+      - Playwright
+      - Appium
+      - BrowserStack
+      - JUnit
+      - Karate
+      - Postman
+      - JMeter
+      - SoapUI
+      - Katalon
+      - Tosca
+
+  - category: Databases & Caching
+    items:
+      - PostgreSQL
+      - MySQL
+      - Microsoft SQL Server
+      - Oracle DB
+      - Redis
+
+  - category: Monitoring & Analytics
+    items:
+      - Azure Application Insights
+      - KQL (Kusto Query Language)
+      - Power BI
+      - Splunk
+
+  - category: Programming & Scripting
+    items:
+      - Python
+      - Java
+      - JavaScript
+      - C#
+      - PowerShell
+      - Bash
+      - Node.js
+
+  - category: Cloud & Networking
+    items:
+      - Azure (AZ-400, AZ-104, AZ-204)
+      - Azure VNets, peering, private endpoints
+      - Azure security groups, WAF, managed services
+      - Hub-and-spoke architecture
+
+  - category: AI & Platform Tools
+    items:
+      - Azure AI Foundry
+      - LLM APIs
+      - Microsoft 365
+      - Power Platform
+      - Power Automate
+      - Power Apps
+      - SharePoint
+      - GCP (OAuth, API Management, Google Play)
+
+  - category: Delivery & Collaboration
+    items:
+      - Agile/Scrum
+      - Jira
+      - Confluence
+      - Release Management
+      - Stakeholder Engagement
+      - Team Mentorship
+
+certifications:
+  - title: Microsoft Certified - DevOps Engineer Expert
+    issuer: Microsoft
+    date: { year: 2023 }
+    note: AZ-400
+
+  - title: Microsoft Certified - Azure Administrator Associate
+    issuer: Microsoft
+    date: { year: 2023 }
+    note: AZ-104
+
+  - title: Microsoft Certified - Azure Developer Associate
+    issuer: Microsoft
+    date: { year: 2023 }
+    note: AZ-204
+
+  - title: ISTQB Certified Tester - Test Automation Engineer
+    issuer: ISTQB
+    date: { year: 2021 }
+
+  - title: ISTQB Certified Tester - Foundation Level
+    issuer: ISTQB
+    date: { year: 2019 }
+
+  - title: Certified Scrum Master (CSM)
+    issuer: Scrum Alliance
+    date: { year: 2020 }
+
+projects:
+  - name: publish-az-test-results
+    description: >
+      PowerShell module that publishes JUnit XML results into Azure DevOps Test Plans with
+      automated mapping of configurations, plans, and suites. Improves audit evidence and
+      test traceability in CI/CD pipelines.
+    stack:
+      - PowerShell
+      - Azure DevOps
+    url: https://github.com/janesmith/publish-az-test-results
+
+  - name: budget-tracker-app
+    description: >
+      Mobile application for budget tracking to help users monitor spending and manage
+      personal finances, integrating LLM APIs for AI-powered features. Built on GCP
+      for OAuth authentication and API management, distributed via Google Play.
+      CI/CD pipeline automated using GitHub Actions for build, test, and release workflows.
+    stack:
+      - Android
+      - GCP
+      - OAuth
+      - GitHub Actions
+    url: https://github.com/janesmith/budget-tracker
