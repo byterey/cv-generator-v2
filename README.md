@@ -58,7 +58,7 @@ cv.yml (your data)
 ## Project Structure
 
 ```
-cv-generator/
+now-cv/
   src/
     generate.js     # Main build script — reads YAML, renders HTML, generates PDF
     tailor.js       # Keyword analysis tool — scores CV content against a job description
