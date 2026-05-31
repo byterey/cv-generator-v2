@@ -123,6 +123,10 @@ All templates must pass ATS parsing. Key rules:
 
 MIT — see [LICENSE](LICENSE) for details.
 
+## Disclaimer
+
+This software is provided **"as is"** without warranty of any kind. The author is not responsible for any outcomes arising from its use, including but not limited to inaccuracies in generated documents, employment decisions, or legal issues. Users are solely responsible for the content of their CVs and compliance with applicable laws.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on pull requests, coding conventions, and the contributor license agreement.
