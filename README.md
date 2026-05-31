@@ -10,14 +10,39 @@ An ATS-friendly CV/resume generator that renders structured YAML data into HTML 
 # 1. Install dependencies
 npm install
 
-# 2. Copy and edit the sample CV with your own information
-cp sample-data/cv.yml cv.yml
+# 2. Copy the sample CV and replace with your own information
+cp sample-data/cv.yml cv.yml   # Windows: copy sample-data\cv.yml cv.yml
 
 # 3. Build your CV
-npm run build
+npm run build -- --data cv.yml
 ```
 
 Output: `output/cv.html` and `output/cv.pdf` (ATS-compatible — all text is selectable, single-column layout, semantic HTML).
+
+> `cv.yml` is gitignored — your personal data never gets committed.
+
+## Testing Against a Job Description
+
+```bash
+# 1. Save the job description as a text file
+#    Create a jobs/ folder and paste the JD into a .txt file
+#    e.g. jobs/acme-engineer.txt
+
+# 2. Score your CV against the JD
+#    Shows which bullets and skill categories match JD keywords
+npm run tailor jobs/acme-engineer.txt -- --data cv.yml
+
+# 3. (Optional) Create an overlay to tailor your CV for the role
+#    See sample-data/sample-overlay.yml for the full format
+#    Save your overlay to jobs/acme-engineer-overlay.yml
+
+# 4. Build your tailored CV
+npm run build -- --data cv.yml --overlay jobs/acme-engineer-overlay.yml
+```
+
+Output is always written to `output/cv.pdf` and `output/cv.html`.
+
+> `jobs/` is gitignored — your applications stay private.
 
 ## How It Works
 
