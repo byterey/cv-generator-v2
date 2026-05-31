@@ -1,13 +1,13 @@
 {
-  "name": "cv-generator",
+  "name": "now-cv",
   "version": "2.0.0",
   "description": "ATS-friendly CV/resume generator — renders structured YAML data to HTML and PDF via Handlebars and Puppeteer",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://github.com/byterey/cv-generator-v2",
+  "homepage": "https://github.com/byterey/now-cv",
   "repository": {
     "type": "git",
-    "url": "https://github.com/byterey/cv-generator-v2.git"
+    "url": "https://github.com/byterey/now-cv.git"
   },
   "scripts": {
     "build": "node src/generate.js",

@@ -1,4 +1,4 @@
-# CV Generator
+# now-cv
 
 An ATS-friendly CV/resume generator that renders structured YAML data into HTML and PDF.
 
