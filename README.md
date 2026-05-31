@@ -139,6 +139,28 @@ All templates must pass ATS parsing. Key rules:
    ```
 3. Your template receives the full CV data object and owns all formatting
 
+## Using with AI (Claude Code, Codex, Copilot)
+
+`CLAUDE.md` and `AGENTS.md` are included in this repo. When you open this project in an AI-assisted editor, the agent will automatically read these files and follow the workflow below — no prompting needed.
+
+**What the AI does when you paste a JD:**
+
+1. **Screens first** — reads your `cv.yml` and rates the fit as Tier A / B / C before touching anything
+2. **Reports across three lenses** — ATS keyword scan, recruiter 6-second pass, hiring manager view
+3. **Flags gaps** — structural (hard to fix) vs fixable (missing keyword, weak bullet)
+4. **Generates only if the fit is strong enough** — or waits for your explicit go-ahead on Tier B/C
+5. **Builds the tailored CV** — writes an overlay, runs the build, outputs `output/cv.pdf`
+
+**To use it:**
+```bash
+# Open Claude Code in this project
+claude .
+
+# Then just paste the job description and say something like:
+# "Here's a JD I want to apply for: <paste JD>"
+# The AI handles screening, overlay generation, and build automatically.
+```
+
 ## Requirements
 
 - Node.js 18+

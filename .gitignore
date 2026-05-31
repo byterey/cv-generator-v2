@@ -38,5 +38,3 @@ dist/
 # Agent configs (personal, not part of the app)
 .codex/
 MASTER.md
-CLAUDE.md
-AGENTS.md
