@@ -1,5 +1,5 @@
 # =============================================================================
-# SAMPLE CV DATA — Replace with your own information.
+# SAMPLE CV DATA — Replace with your own information. place it under root folder
 # =============================================================================
 # This file is the single source of truth for your CV content.
 # Run `npm run build` to generate output/cv.html and output/cv.pdf.
@@ -225,39 +225,11 @@ certifications:
     date: { year: 2023 }
     note: AZ-400
 
-  - title: Microsoft Certified - Azure Administrator Associate
-    issuer: Microsoft
-    date: { year: 2023 }
-    note: AZ-104
-
-  - title: Microsoft Certified - Azure Developer Associate
-    issuer: Microsoft
-    date: { year: 2023 }
-    note: AZ-204
-
-  - title: ISTQB Certified Tester - Test Automation Engineer
-    issuer: ISTQB
-    date: { year: 2021 }
-
-  - title: ISTQB Certified Tester - Foundation Level
-    issuer: ISTQB
-    date: { year: 2019 }
-
   - title: Certified Scrum Master (CSM)
     issuer: Scrum Alliance
     date: { year: 2020 }
 
 projects:
-  - name: publish-az-test-results
-    description: >
-      PowerShell module that publishes JUnit XML results into Azure DevOps Test Plans with
-      automated mapping of configurations, plans, and suites. Improves audit evidence and
-      test traceability in CI/CD pipelines.
-    stack:
-      - PowerShell
-      - Azure DevOps
-    url: https://github.com/janesmith/publish-az-test-results
-
   - name: budget-tracker-app
     description: >
       Mobile application for budget tracking to help users monitor spending and manage
