@@ -1,5 +1,11 @@
 import { NextResponse } from 'next/server';
-import { deleteCv, updateCv } from '@/lib/supabase/cvs';
+import { deleteCv, getCv, updateCv } from '@/lib/supabase/cvs';
+
+export async function GET(_req: Request, { params }: { params: { id: string } }) {
+  const cv = await getCv(params.id);
+  if (!cv) return NextResponse.json({ error: 'Not found' }, { status: 404 });
+  return NextResponse.json(cv);
+}
 
 export async function DELETE(_req: Request, { params }: { params: { id: string } }) {
   try {
