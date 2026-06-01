@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{personal.name}} - CV</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      font-size: 10.5pt;
+      line-height: 1.45;
+      color: #1a1a1a;
+      background: #fff;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    /* ATS: single column, no floats, no grid reordering */
+    header {
+      text-align: center;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #1a1a1a;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 22pt;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .headline {
+      font-size: 10pt;
+      color: #444;
+      margin: 3px 0 6px;
+    }
+
+    .contact {
+      font-size: 9.5pt;
+      color: #222;
+    }
+
+    .contact a {
+      color: #222;
+      text-decoration: none;
+    }
+
+    .contact span::before {
+      content: ' | ';
+    }
+
+    .contact span:first-child::before {
+      content: '';
+    }
+
+    section {
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: 11pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #1a1a1a;
+      padding-bottom: 2px;
+      margin-bottom: 8px;
+    }
+
+    /* Summary */
+    .summary p {
+      font-size: 10pt;
+    }
+
+    /* Experience */
+    .entry {
+      margin-bottom: 10px;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .entry-title {
+      font-weight: bold;
+      font-size: 10.5pt;
+    }
+
+    .entry-meta {
+      font-size: 9.5pt;
+      color: #444;
+      white-space: nowrap;
+      margin-left: 8px;
+    }
+
+    .entry-sub {
+      font-size: 10pt;
+      font-style: italic;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    /* ATS: use real list elements for bullets */
+    ul.bullets {
+      padding-left: 18px;
+      margin-top: 4px;
+    }
+
+    ul.bullets li {
+      margin-bottom: 2px;
+      font-size: 10pt;
+    }
+
+    /* Skills */
+    .skill-group {
+      margin-bottom: 5px;
+      font-size: 10pt;
+    }
+
+    .skill-category {
+      font-weight: bold;
+      display: inline;
+    }
+
+    .skill-items {
+      display: inline;
+    }
+
+    /* Education */
+    .edu-entry {
+      margin-bottom: 6px;
+    }
+
+    /* Certifications */
+    .cert-entry {
+      margin-bottom: 4px;
+      font-size: 10pt;
+    }
+
+    /* Projects */
+    .project-entry {
+      margin-bottom: 8px;
+    }
+
+    .project-name {
+      font-weight: bold;
+      font-size: 10.5pt;
+    }
+
+    .project-stack {
+      font-size: 9.5pt;
+      color: #555;
+    }
+
+    .project-url {
+      font-size: 9.5pt;
+      color: #444;
+      margin-top: 1px;
+    }
+
+    .project-url a { color: #444; }
+
+    .project-desc {
+      font-size: 10pt;
+      margin-top: 2px;
+    }
+
+    @media print {
+      body { max-width: 100%; }
+      a { color: #1a1a1a; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>{{personal.name}}</h1>
+    <p class="headline">{{personal.headline}}</p>
+    <p class="contact">
+      <span>{{personal.email}}</span>
+      <span>{{personal.phone}}</span>
+      <span>{{personal.location}}</span>
+      {{#each personal.links}}
+      <span><a href="{{url}}">{{label}}</a></span>
+      {{/each}}
+    </p>
+  </header>
+
+  {{#each meta.sections}}
+    {{#if (eq this "personal")}}{{! header already rendered above}}{{/if}}
+
+    {{#if (eq this "experience")}}
+    <section aria-label="Work Experience">
+      <h2>Work Experience</h2>
+      {{#each ../experience}}
+      <article class="entry">
+        <div class="entry-header">
+          <span class="entry-title">{{company}}</span>
+          <span class="entry-meta">
+            <time datetime="{{start.year}}-{{start.month}}">{{formatDate start}}</time>
+            -
+            {{#if current}}<time>Present</time>{{else}}<time datetime="{{end.year}}-{{end.month}}">{{formatDate end}}</time>{{/if}}
+            | {{location}}
+          </span>
+        </div>
+        <p class="entry-sub">{{role}}</p>
+        <ul class="bullets">
+          {{#each bullets}}<li>{{this}}</li>{{/each}}
+        </ul>
+      </article>
+      {{/each}}
+    </section>
+    {{/if}}
+
+    {{#if (eq this "skills")}}
+    <section aria-label="Skills">
+      <h2>Technical Skills</h2>
+      {{#each ../skills}}
+      <div class="skill-group">
+        <span class="skill-category">{{category}}:</span>
+        <span class="skill-items">{{#each items}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+      </div>
+      {{/each}}
+    </section>
+    {{/if}}
+
+    {{#if (eq this "education")}}
+    <section aria-label="Education">
+      <h2>Education</h2>
+      {{#each ../education}}
+      <div class="edu-entry">
+        <div class="entry-header">
+          <span class="entry-title">{{institution}}</span>
+          <span class="entry-meta"><time datetime="{{end.year}}">{{end.year}}</time></span>
+        </div>
+        <p class="entry-sub">{{degree}}{{#if field}}, {{field}}{{/if}}</p>
+      </div>
+      {{/each}}
+    </section>
+    {{/if}}
+
+    {{#if (eq this "certifications")}}
+    <section aria-label="Certifications">
+      <h2>Certifications</h2>
+      {{#each ../certifications}}
+      <div class="cert-entry">
+        <strong>{{title}}</strong> - {{issuer}}{{#if note}} ({{note}}){{/if}},
+        <time datetime="{{date.year}}">{{date.year}}</time>
+      </div>
+      {{/each}}
+    </section>
+    {{/if}}
+
+    {{#if (eq this "projects")}}
+    <section aria-label="Projects">
+      <h2>Projects</h2>
+      {{#each ../projects}}
+      <div class="project-entry">
+        <div class="entry-header">
+          <span class="project-name">
+            {{#if url}}<a href="{{url}}">{{name}}</a>{{else}}{{name}}{{/if}}
+          </span>
+          {{#if stack}}
+          <span class="project-stack">{{#each stack}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+          {{/if}}
+        </div>
+        {{#if url}}<p class="project-url"><a href="{{url}}">{{url}}</a></p>{{/if}}
+        <p class="project-desc">{{description}}</p>
+      </div>
+      {{/each}}
+    </section>
+    {{/if}}
+
+  {{/each}}
+
+</body>
+</html>
