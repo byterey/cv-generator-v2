@@ -1,0 +1,7 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/byterey/now-cv/security/advisories/new
+    about: >
+      Report a security issue privately via GitHub's Security Advisory system.
+      Do NOT open a public issue for security vulnerabilities.

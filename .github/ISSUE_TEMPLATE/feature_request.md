@@ -1,19 +1,30 @@
 ---
 name: Feature Request
-about: Suggest an idea for this project
+about: Suggest an improvement or new capability
 title: "[Feature] "
 labels: enhancement
 assignees: ''
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is.
+**Problem**
+What problem does this solve? Who is affected and how often?
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**Proposed solution**
+Describe what you want. Be specific about inputs, outputs, and user-facing behaviour.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Alternatives considered**
+Any other approaches you thought about, and why you rejected them.
+
+**Area**
+- [ ] CV builder / wizard
+- [ ] PDF generation / templates
+- [ ] JD analysis (AI screening)
+- [ ] CV generation (AI tailoring)
+- [ ] Authentication / accounts
+- [ ] Credits / billing model
+- [ ] CLI tool
+- [ ] Deployment / infrastructure
+- [ ] Other
 
 **Additional context**
-Add any other context or screenshots about the feature request here.
+<!-- Mockups, links to prior art, related issues. -->

@@ -1,0 +1,23 @@
+# <type>(<scope>): <short summary under 72 chars>
+#
+# Types: feat | fix | refactor | docs | chore | test | perf
+# Scope (optional): web | cli | template | schema | ci | deps
+#
+# Body (optional — wrap at 72 chars):
+# Explain WHY, not what. What does this enable?
+# List anything non-obvious or that a reviewer needs to know.
+#
+# ---------------------------------------------------------------
+# RULES FOR THIS REPO
+# ---------------------------------------------------------------
+# - No AI session URLs (e.g. claude.ai/code/session_...)
+# - No internal planning notes or task IDs
+# - No .env values, credentials, or personal data
+# - No "Co-authored-by: Claude" or similar AI attribution lines
+#   (unnecessary; the code speaks for itself)
+# ---------------------------------------------------------------
+#
+# Examples:
+#   feat(web): add PDF preview iframe to CV page
+#   fix(cli): handle missing end date in experience entry
+#   chore(deps): bump puppeteer to 22.6.0
