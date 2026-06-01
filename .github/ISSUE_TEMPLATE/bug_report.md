@@ -6,21 +6,38 @@ labels: bug
 assignees: ''
 ---
 
+<!-- IMPORTANT: Do not include personal data, CV content, API keys,
+     or any information from job descriptions in this report. -->
+
 **Describe the bug**
-A clear and concise description of what the bug is.
+A clear description of what went wrong.
+
+**Area**
+- [ ] CV builder / wizard
+- [ ] PDF generation
+- [ ] JD analysis (AI)
+- [ ] CV generation (AI)
+- [ ] Authentication / sign-in
+- [ ] Credits system
+- [ ] CLI tool (`npm run build`)
+- [ ] Other
 
 **To Reproduce**
-Steps to reproduce the behavior:
-1. Run command '...'
-2. See error
+Steps to reproduce:
+1.
+2.
+3.
 
-**Expected behavior**
+**Expected behaviour**
 What you expected to happen.
 
-**Environment:**
- - OS: [e.g. macOS 14, Windows 11]
- - Node version: [e.g. 20.11]
- - Puppeteer version: [e.g. 22.0]
+**Actual behaviour**
+What actually happened. Paste error messages or console output here (redact any personal data).
+
+**Environment**
+- Browser / Node version:
+- OS:
+- Deployment: local dev / Azure / other
 
 **Additional context**
-Add any other context about the problem here.
+<!-- Screenshots, logs, etc. Redact any personal or sensitive content. -->
